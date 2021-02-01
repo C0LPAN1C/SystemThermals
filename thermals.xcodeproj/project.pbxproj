@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2753E65C25C816E80083B9E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2753E65B25C816E80083B9E5 /* main.m */; };
+		2753E67125C819330083B9E5 /* SMCWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2753E66F25C819320083B9E5 /* SMCWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		2753E65825C816E80083B9E5 /* thermals */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = thermals; sourceTree = BUILT_PRODUCTS_DIR; };
 		2753E65B25C816E80083B9E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2753E66E25C819320083B9E5 /* SMCWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMCWrapper.h; sourceTree = "<group>"; };
+		2753E66F25C819320083B9E5 /* SMCWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMCWrapper.m; sourceTree = "<group>"; };
+		2753E67025C819330083B9E5 /* smc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = smc.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,20 @@
 		2753E65A25C816E80083B9E5 /* thermals */ = {
 			isa = PBXGroup;
 			children = (
+				2753E67425C81BAB0083B9E5 /* SMCWrapper */,
 				2753E65B25C816E80083B9E5 /* main.m */,
 			);
 			path = thermals;
+			sourceTree = "<group>";
+		};
+		2753E67425C81BAB0083B9E5 /* SMCWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				2753E67025C819330083B9E5 /* smc.h */,
+				2753E66E25C819320083B9E5 /* SMCWrapper.h */,
+				2753E66F25C819320083B9E5 /* SMCWrapper.m */,
+			);
+			path = SMCWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2753E65C25C816E80083B9E5 /* main.m in Sources */,
+				2753E67125C819330083B9E5 /* SMCWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
