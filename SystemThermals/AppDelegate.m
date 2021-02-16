@@ -52,10 +52,10 @@ float get_cpu_temp(void)
     [self performSelector:@selector(mainthread_dotask) withObject:nil afterDelay:DELAY_T];
 }
 
-- (void) update_temp
+
+- (NSColor *) get_temp_colour
 {
     NSColor *tempColour = [NSColor textColor];
-   
     float t = get_cpu_temp();
     
     if (t < TJ_MID)
@@ -70,17 +70,17 @@ float get_cpu_temp(void)
     {
         tempColour = [NSColor orangeColor];
     }
-    if (t >= TJ_WARN3)
-    {
-        tempColour = [NSColor brownColor];
-    }
-    if (t >= TJ_MAX)
+
+    if (t >= TJ_WARN3 || t >= TJ_MAX)
     {
         tempColour = [NSColor redColor];
     }
+    return tempColour;
+}
 
-    
-    NSDictionary *titleAttributes = [NSDictionary dictionaryWithObject:tempColour forKey:NSForegroundColorAttributeName];
+- (void) update_temp
+{
+    NSDictionary *titleAttributes = [NSDictionary dictionaryWithObject:[self get_temp_colour] forKey:NSForegroundColorAttributeName];
     
     NSAttributedString* colouredTitle = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@°",get_cpu_temperature(0)] attributes:titleAttributes];
 
