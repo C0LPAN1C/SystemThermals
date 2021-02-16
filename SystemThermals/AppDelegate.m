@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  SystemThermals
 //
-//  Created by Amit Apollo Barman on 2/16/21.
+//  Created by Apollo SOFTWARE on 2/1/21.
 //
 
 #import "AppDelegate.h"
@@ -15,22 +15,21 @@
 
 @implementation AppDelegate
 
-
 NSString *get_cpu_temperature(int core_number)
 {
     SMCWrapper *smc = [SMCWrapper sharedWrapper];
     NSNumber *temp;
-    if ( [smc readKey:"TC0P" intoNumber:&temp] ){
+    if ( [smc readKey:SMC_KEY intoNumber:&temp] ){
        return (void)(@"%@°"),[temp stringValue];
     }
     else return @"0°";
 }
 
-float get_cpu_temp()
+float get_cpu_temp(void)
 {
     SMCWrapper *smc = [SMCWrapper sharedWrapper];
     NSNumber *temp;
-    if ( [smc readKey:"TC0P" intoNumber:&temp] ){
+    if ( [smc readKey:SMC_KEY intoNumber:&temp] ){
        return [temp floatValue];
     }
     else return 0.0f;

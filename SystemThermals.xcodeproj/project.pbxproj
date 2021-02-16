@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,7 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2753E65825C816E80083B9E5 /* thermals */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = thermals; sourceTree = BUILT_PRODUCTS_DIR; };
+		2753E65825C816E80083B9E5 /* ConsoleThermals */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ConsoleThermals; sourceTree = BUILT_PRODUCTS_DIR; };
 		2753E65B25C816E80083B9E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2753E66E25C819320083B9E5 /* SMCWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMCWrapper.h; sourceTree = "<group>"; };
 		2753E66F25C819320083B9E5 /* SMCWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMCWrapper.m; sourceTree = "<group>"; };
@@ -64,13 +64,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2753E64F25C816E80083B9E5 = {
+		2707F4B325DC880B00DA4150 /* wrappers */ = {
 			isa = PBXGroup;
 			children = (
 				2753E67025C819330083B9E5 /* smc.h */,
 				2753E66E25C819320083B9E5 /* SMCWrapper.h */,
 				2753E66F25C819320083B9E5 /* SMCWrapper.m */,
-				2753E65A25C816E80083B9E5 /* thermals */,
+			);
+			path = wrappers;
+			sourceTree = "<group>";
+		};
+		2753E64F25C816E80083B9E5 = {
+			isa = PBXGroup;
+			children = (
+				2707F4B325DC880B00DA4150 /* wrappers */,
+				2753E65A25C816E80083B9E5 /* ConsoleThermals */,
 				276A95A225DC7414006B723E /* SystemThermals */,
 				2753E65925C816E80083B9E5 /* Products */,
 			);
@@ -79,26 +87,18 @@
 		2753E65925C816E80083B9E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2753E65825C816E80083B9E5 /* thermals */,
+				2753E65825C816E80083B9E5 /* ConsoleThermals */,
 				276A95A125DC7414006B723E /* SystemThermals.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2753E65A25C816E80083B9E5 /* thermals */ = {
+		2753E65A25C816E80083B9E5 /* ConsoleThermals */ = {
 			isa = PBXGroup;
 			children = (
-				2753E67425C81BAB0083B9E5 /* SMCWrapper */,
 				2753E65B25C816E80083B9E5 /* main.m */,
 			);
-			path = thermals;
-			sourceTree = "<group>";
-		};
-		2753E67425C81BAB0083B9E5 /* SMCWrapper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SMCWrapper;
+			path = ConsoleThermals;
 			sourceTree = "<group>";
 		};
 		276A95A225DC7414006B723E /* SystemThermals */ = {
@@ -118,9 +118,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2753E65725C816E80083B9E5 /* thermals */ = {
+		2753E65725C816E80083B9E5 /* ConsoleThermals */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2753E65F25C816E80083B9E5 /* Build configuration list for PBXNativeTarget "thermals" */;
+			buildConfigurationList = 2753E65F25C816E80083B9E5 /* Build configuration list for PBXNativeTarget "ConsoleThermals" */;
 			buildPhases = (
 				2753E65425C816E80083B9E5 /* Sources */,
 				2753E65525C816E80083B9E5 /* Frameworks */,
@@ -130,9 +130,9 @@
 			);
 			dependencies = (
 			);
-			name = thermals;
+			name = ConsoleThermals;
 			productName = thermals;
-			productReference = 2753E65825C816E80083B9E5 /* thermals */;
+			productReference = 2753E65825C816E80083B9E5 /* ConsoleThermals */;
 			productType = "com.apple.product-type.tool";
 		};
 		276A95A025DC7414006B723E /* SystemThermals */ = {
@@ -158,7 +158,8 @@
 		2753E65025C816E80083B9E5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1250;
+				ORGANIZATIONNAME = "Apollo SOFTWARE";
 				TargetAttributes = {
 					2753E65725C816E80083B9E5 = {
 						CreatedOnToolsVersion = 12.3;
@@ -168,8 +169,8 @@
 					};
 				};
 			};
-			buildConfigurationList = 2753E65325C816E80083B9E5 /* Build configuration list for PBXProject "thermals" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 2753E65325C816E80083B9E5 /* Build configuration list for PBXProject "SystemThermals" */;
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -181,7 +182,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2753E65725C816E80083B9E5 /* thermals */,
+				2753E65725C816E80083B9E5 /* ConsoleThermals */,
 				276A95A025DC7414006B723E /* SystemThermals */,
 			);
 		};
@@ -349,6 +350,7 @@
 		2753E66025C816E80083B9E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SJZPS3J9JV;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -359,6 +361,7 @@
 		2753E66125C816E80083B9E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SJZPS3J9JV;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -372,6 +375,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SystemThermals/SystemThermals.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SJZPS3J9JV;
@@ -392,6 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SystemThermals/SystemThermals.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SJZPS3J9JV;
@@ -409,7 +414,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2753E65325C816E80083B9E5 /* Build configuration list for PBXProject "thermals" */ = {
+		2753E65325C816E80083B9E5 /* Build configuration list for PBXProject "SystemThermals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2753E65D25C816E80083B9E5 /* Debug */,
@@ -418,7 +423,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2753E65F25C816E80083B9E5 /* Build configuration list for PBXNativeTarget "thermals" */ = {
+		2753E65F25C816E80083B9E5 /* Build configuration list for PBXNativeTarget "ConsoleThermals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2753E66025C816E80083B9E5 /* Debug */,

@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  SystemThermals
 //
-//  Created by Amit Apollo Barman on 2/16/21.
+//  Created by Apollo SOFTWARE on 2/1/21.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -13,6 +13,7 @@
 #define TJ_WARN2    70.0
 #define TJ_WARN3    80.0
 #define TJ_MAX      90.0
+#define SMC_KEY     "TC0P"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property (strong, nonatomic) NSStatusItem *statusItem;

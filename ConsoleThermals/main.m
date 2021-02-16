@@ -1,8 +1,8 @@
 //
 //  main.m
-//  thermals
+//  SystemThermals
 //
-//  Created by Amit Apollo Barman on 2/1/21.
+//  Created by Apollo SOFTWARE on 2/1/21.
 //
 
 #import <Foundation/Foundation.h>
