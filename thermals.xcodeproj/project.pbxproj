@@ -8,7 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2753E65C25C816E80083B9E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2753E65B25C816E80083B9E5 /* main.m */; };
-		2753E67125C819330083B9E5 /* SMCWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2753E66F25C819320083B9E5 /* SMCWrapper.m */; };
+		276A95A525DC7414006B723E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 276A95A425DC7414006B723E /* AppDelegate.m */; };
+		276A95AA25DC7415006B723E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276A95A925DC7415006B723E /* Assets.xcassets */; };
+		276A95AD25DC7415006B723E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A95AB25DC7415006B723E /* Main.storyboard */; };
+		276A95B025DC7415006B723E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 276A95AF25DC7415006B723E /* main.m */; };
+		276A95B925DC7570006B723E /* SMCWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2753E66F25C819320083B9E5 /* SMCWrapper.m */; };
+		276A95C225DC7954006B723E /* SMCWrapper.h in Sources */ = {isa = PBXBuildFile; fileRef = 2753E66E25C819320083B9E5 /* SMCWrapper.h */; };
+		276A95C525DC7959006B723E /* SMCWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2753E66F25C819320083B9E5 /* SMCWrapper.m */; };
+		276A95C825DC795B006B723E /* smc.h in Sources */ = {isa = PBXBuildFile; fileRef = 2753E67025C819330083B9E5 /* smc.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +36,25 @@
 		2753E66E25C819320083B9E5 /* SMCWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMCWrapper.h; sourceTree = "<group>"; };
 		2753E66F25C819320083B9E5 /* SMCWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMCWrapper.m; sourceTree = "<group>"; };
 		2753E67025C819330083B9E5 /* smc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = smc.h; sourceTree = "<group>"; };
+		276A95A125DC7414006B723E /* SystemThermals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SystemThermals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		276A95A325DC7414006B723E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		276A95A425DC7414006B723E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		276A95A925DC7415006B723E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		276A95AC25DC7415006B723E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		276A95AE25DC7415006B723E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		276A95AF25DC7415006B723E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		276A95B125DC7415006B723E /* SystemThermals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SystemThermals.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2753E65525C816E80083B9E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276A959E25DC7414006B723E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,7 +67,11 @@
 		2753E64F25C816E80083B9E5 = {
 			isa = PBXGroup;
 			children = (
+				2753E67025C819330083B9E5 /* smc.h */,
+				2753E66E25C819320083B9E5 /* SMCWrapper.h */,
+				2753E66F25C819320083B9E5 /* SMCWrapper.m */,
 				2753E65A25C816E80083B9E5 /* thermals */,
+				276A95A225DC7414006B723E /* SystemThermals */,
 				2753E65925C816E80083B9E5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				2753E65825C816E80083B9E5 /* thermals */,
+				276A95A125DC7414006B723E /* SystemThermals.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,11 +97,22 @@
 		2753E67425C81BAB0083B9E5 /* SMCWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				2753E67025C819330083B9E5 /* smc.h */,
-				2753E66E25C819320083B9E5 /* SMCWrapper.h */,
-				2753E66F25C819320083B9E5 /* SMCWrapper.m */,
 			);
 			path = SMCWrapper;
+			sourceTree = "<group>";
+		};
+		276A95A225DC7414006B723E /* SystemThermals */ = {
+			isa = PBXGroup;
+			children = (
+				276A95A325DC7414006B723E /* AppDelegate.h */,
+				276A95A425DC7414006B723E /* AppDelegate.m */,
+				276A95A925DC7415006B723E /* Assets.xcassets */,
+				276A95AB25DC7415006B723E /* Main.storyboard */,
+				276A95AE25DC7415006B723E /* Info.plist */,
+				276A95AF25DC7415006B723E /* main.m */,
+				276A95B125DC7415006B723E /* SystemThermals.entitlements */,
+			);
+			path = SystemThermals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +135,23 @@
 			productReference = 2753E65825C816E80083B9E5 /* thermals */;
 			productType = "com.apple.product-type.tool";
 		};
+		276A95A025DC7414006B723E /* SystemThermals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 276A95B425DC7415006B723E /* Build configuration list for PBXNativeTarget "SystemThermals" */;
+			buildPhases = (
+				276A959D25DC7414006B723E /* Sources */,
+				276A959E25DC7414006B723E /* Frameworks */,
+				276A959F25DC7414006B723E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SystemThermals;
+			productName = SystemThermals;
+			productReference = 276A95A125DC7414006B723E /* SystemThermals.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -106,6 +161,9 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					2753E65725C816E80083B9E5 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					276A95A025DC7414006B723E = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -124,21 +182,57 @@
 			projectRoot = "";
 			targets = (
 				2753E65725C816E80083B9E5 /* thermals */,
+				276A95A025DC7414006B723E /* SystemThermals */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		276A959F25DC7414006B723E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276A95AA25DC7415006B723E /* Assets.xcassets in Resources */,
+				276A95AD25DC7415006B723E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2753E65425C816E80083B9E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276A95C825DC795B006B723E /* smc.h in Sources */,
+				276A95C225DC7954006B723E /* SMCWrapper.h in Sources */,
+				276A95C525DC7959006B723E /* SMCWrapper.m in Sources */,
 				2753E65C25C816E80083B9E5 /* main.m in Sources */,
-				2753E67125C819330083B9E5 /* SMCWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		276A959D25DC7414006B723E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276A95B025DC7415006B723E /* main.m in Sources */,
+				276A95A525DC7414006B723E /* AppDelegate.m in Sources */,
+				276A95B925DC7570006B723E /* SMCWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		276A95AB25DC7415006B723E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				276A95AC25DC7415006B723E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2753E65D25C816E80083B9E5 /* Debug */ = {
@@ -272,6 +366,46 @@
 			};
 			name = Release;
 		};
+		276A95B225DC7415006B723E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SystemThermals/SystemThermals.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SJZPS3J9JV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SystemThermals/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apolloss.SystemThermals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		276A95B325DC7415006B723E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SystemThermals/SystemThermals.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SJZPS3J9JV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SystemThermals/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.apolloss.SystemThermals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -289,6 +423,15 @@
 			buildConfigurations = (
 				2753E66025C816E80083B9E5 /* Debug */,
 				2753E66125C816E80083B9E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		276A95B425DC7415006B723E /* Build configuration list for PBXNativeTarget "SystemThermals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276A95B225DC7415006B723E /* Debug */,
+				276A95B325DC7415006B723E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

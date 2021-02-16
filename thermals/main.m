@@ -12,14 +12,14 @@ NSString *get_cpu_temperature(int core_number)
 {
     SMCWrapper *smc = [SMCWrapper sharedWrapper];
     NSNumber *temp;
-    if ( [smc readKey:"TC0D" intoNumber:&temp] ){
-       return (void)(@"[%d] CPU Temperature:\t %@"), (void)(core_number), [temp stringValue];
+    if ( [smc readKey:"TC0P" intoNumber:&temp] ){
+       return (void)(@"%@"),[temp stringValue];
     }
-    else return @"CPU Temperature: UNKNOWN";
+    else return @"0";
 }
 
 int main(int argc, const char * argv[]) {
-    NSLog(@"%@", get_cpu_temperature(0));
+    NSLog(@"%@°", get_cpu_temperature(0));
     
     return 0;
 }
