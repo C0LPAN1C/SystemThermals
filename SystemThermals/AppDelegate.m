@@ -15,7 +15,33 @@
 
 @implementation AppDelegate
 
-NSString *get_cpu_temperature(int core_number)
+
+- (NSColor *) get_temp_colour
+{
+    NSColor *tempColour = [NSColor textColor];
+    float t = [self get_cpu_temp];
+    
+    if (t < TJ_MID)
+    {
+        tempColour = [NSColor greenColor];
+    }
+    if (t >= TJ_WARN1)
+    {
+        tempColour = [NSColor yellowColor];
+    }
+    if (t >= TJ_WARN2)
+    {
+        tempColour = [NSColor orangeColor];
+    }
+
+    if (t >= TJ_WARN3 || t >= TJ_MAX)
+    {
+        tempColour = [NSColor redColor];
+    }
+    return tempColour;
+}
+
+- (NSString *) get_cpu_temperature: (int) core_number
 {
     SMCWrapper *smc = [SMCWrapper sharedWrapper];
     NSNumber *temp;
@@ -25,7 +51,7 @@ NSString *get_cpu_temperature(int core_number)
     else return @"0°";
 }
 
-float get_cpu_temp(void)
+- (float) get_cpu_temp
 {
     SMCWrapper *smc = [SMCWrapper sharedWrapper];
     NSNumber *temp;
@@ -53,36 +79,11 @@ float get_cpu_temp(void)
 }
 
 
-- (NSColor *) get_temp_colour
-{
-    NSColor *tempColour = [NSColor textColor];
-    float t = get_cpu_temp();
-    
-    if (t < TJ_MID)
-    {
-        tempColour = [NSColor greenColor];
-    }
-    if (t >= TJ_WARN1)
-    {
-        tempColour = [NSColor yellowColor];
-    }
-    if (t >= TJ_WARN2)
-    {
-        tempColour = [NSColor orangeColor];
-    }
-
-    if (t >= TJ_WARN3 || t >= TJ_MAX)
-    {
-        tempColour = [NSColor redColor];
-    }
-    return tempColour;
-}
-
 - (void) update_temp
 {
     NSDictionary *titleAttributes = [NSDictionary dictionaryWithObject:[self get_temp_colour] forKey:NSForegroundColorAttributeName];
     
-    NSAttributedString* colouredTitle = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@°",get_cpu_temperature(0)] attributes:titleAttributes];
+    NSAttributedString* colouredTitle = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@°",[self get_cpu_temperature:0]] attributes:titleAttributes];
 
     _statusItem.button.attributedTitle = colouredTitle;
 }

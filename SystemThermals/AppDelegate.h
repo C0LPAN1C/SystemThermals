@@ -17,6 +17,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property (strong, nonatomic) NSStatusItem *statusItem;
-
+- (NSString *) get_cpu_temperature: (int) core_number;
+- (float) get_cpu_temp;
 @end
 
