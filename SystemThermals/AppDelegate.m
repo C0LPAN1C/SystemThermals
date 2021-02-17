@@ -46,7 +46,7 @@
     SMCWrapper *smc = [SMCWrapper sharedWrapper];
     NSNumber *temp;
     if ( [smc readKey:SMC_KEY intoNumber:&temp] ){
-       return (void)(@"%@°"),[temp stringValue];
+       return (void)(@"%.02f°"),[temp stringValue];
     }
     else return @"0°";
 }
@@ -83,7 +83,7 @@
 {
     NSDictionary *titleAttributes = [NSDictionary dictionaryWithObject:[self get_temp_colour] forKey:NSForegroundColorAttributeName];
     
-    NSAttributedString* colouredTitle = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@°",[self get_cpu_temperature:0]] attributes:titleAttributes];
+    NSAttributedString* colouredTitle = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%.1f°",[self get_cpu_temp]] attributes:titleAttributes];
 
     _statusItem.button.attributedTitle = colouredTitle;
 }
