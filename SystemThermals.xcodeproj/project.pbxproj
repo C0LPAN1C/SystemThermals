@@ -12,10 +12,9 @@
 		276A95AA25DC7415006B723E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276A95A925DC7415006B723E /* Assets.xcassets */; };
 		276A95AD25DC7415006B723E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A95AB25DC7415006B723E /* Main.storyboard */; };
 		276A95B025DC7415006B723E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 276A95AF25DC7415006B723E /* main.m */; };
-		276A95B925DC7570006B723E /* SMCWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2753E66F25C819320083B9E5 /* SMCWrapper.m */; };
-		276A95C225DC7954006B723E /* SMCWrapper.h in Sources */ = {isa = PBXBuildFile; fileRef = 2753E66E25C819320083B9E5 /* SMCWrapper.h */; };
-		276A95C525DC7959006B723E /* SMCWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2753E66F25C819320083B9E5 /* SMCWrapper.m */; };
-		276A95C825DC795B006B723E /* smc.h in Sources */ = {isa = PBXBuildFile; fileRef = 2753E67025C819330083B9E5 /* smc.h */; };
+		27DE712B277BAE0D00D0DFE0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DE712A277BAE0D00D0DFE0 /* IOKit.framework */; platformFilter = maccatalyst; };
+		27DE712F277BB9F900D0DFE0 /* M1Wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DE712E277BB9F900D0DFE0 /* M1Wrapper.m */; };
+		27DE7130277BB9F900D0DFE0 /* M1Wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DE712E277BB9F900D0DFE0 /* M1Wrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,9 +32,6 @@
 /* Begin PBXFileReference section */
 		2753E65825C816E80083B9E5 /* ConsoleThermals */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ConsoleThermals; sourceTree = BUILT_PRODUCTS_DIR; };
 		2753E65B25C816E80083B9E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2753E66E25C819320083B9E5 /* SMCWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMCWrapper.h; sourceTree = "<group>"; };
-		2753E66F25C819320083B9E5 /* SMCWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMCWrapper.m; sourceTree = "<group>"; };
-		2753E67025C819330083B9E5 /* smc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = smc.h; sourceTree = "<group>"; };
 		276A95A125DC7414006B723E /* SystemThermals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SystemThermals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276A95A325DC7414006B723E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		276A95A425DC7414006B723E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,6 +40,10 @@
 		276A95AE25DC7415006B723E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276A95AF25DC7415006B723E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		276A95B125DC7415006B723E /* SystemThermals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SystemThermals.entitlements; sourceTree = "<group>"; };
+		27DE712A277BAE0D00D0DFE0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		27DE712C277BAE1800D0DFE0 /* libswiftIOKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftIOKit.tbd; path = usr/lib/swift/libswiftIOKit.tbd; sourceTree = SDKROOT; };
+		27DE712E277BB9F900D0DFE0 /* M1Wrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M1Wrapper.m; sourceTree = "<group>"; };
+		27DE7131277BBA1500D0DFE0 /* M1Wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M1Wrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27DE712B277BAE0D00D0DFE0 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,9 +68,8 @@
 		2707F4B325DC880B00DA4150 /* wrappers */ = {
 			isa = PBXGroup;
 			children = (
-				2753E67025C819330083B9E5 /* smc.h */,
-				2753E66E25C819320083B9E5 /* SMCWrapper.h */,
-				2753E66F25C819320083B9E5 /* SMCWrapper.m */,
+				27DE712E277BB9F900D0DFE0 /* M1Wrapper.m */,
+				27DE7131277BBA1500D0DFE0 /* M1Wrapper.h */,
 			);
 			path = wrappers;
 			sourceTree = "<group>";
@@ -81,6 +81,7 @@
 				2753E65A25C816E80083B9E5 /* ConsoleThermals */,
 				276A95A225DC7414006B723E /* SystemThermals */,
 				2753E65925C816E80083B9E5 /* Products */,
+				27DE7129277BAE0D00D0DFE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +114,15 @@
 				276A95B125DC7415006B723E /* SystemThermals.entitlements */,
 			);
 			path = SystemThermals;
+			sourceTree = "<group>";
+		};
+		27DE7129277BAE0D00D0DFE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27DE712C277BAE1800D0DFE0 /* libswiftIOKit.tbd */,
+				27DE712A277BAE0D00D0DFE0 /* IOKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,9 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276A95C825DC795B006B723E /* smc.h in Sources */,
-				276A95C225DC7954006B723E /* SMCWrapper.h in Sources */,
-				276A95C525DC7959006B723E /* SMCWrapper.m in Sources */,
+				27DE712F277BB9F900D0DFE0 /* M1Wrapper.m in Sources */,
 				2753E65C25C816E80083B9E5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,9 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27DE7130277BB9F900D0DFE0 /* M1Wrapper.m in Sources */,
 				276A95B025DC7415006B723E /* main.m in Sources */,
 				276A95A525DC7414006B723E /* AppDelegate.m in Sources */,
-				276A95B925DC7570006B723E /* SMCWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SMCWrapper.h"
+#import "M1Wrapper.h"
 
 @interface AppDelegate ()
 
@@ -41,24 +41,16 @@
     return tempColour;
 }
 
-- (NSString *) get_cpu_temperature: (int) core_number
+- (NSString *) get_cpu_temperature
 {
-    SMCWrapper *smc = [SMCWrapper sharedWrapper];
-    NSNumber *temp;
-    if ( [smc readKey:SMC_KEY intoNumber:&temp] ){
-       return (void)(@"%.02f°"),[temp stringValue];
-    }
-    else return @"0°";
+    M1Wrapper *m1smc = [M1Wrapper sharedWrapper];
+    return [m1smc get_temp_values];
 }
 
 - (float) get_cpu_temp
 {
-    SMCWrapper *smc = [SMCWrapper sharedWrapper];
-    NSNumber *temp;
-    if ( [smc readKey:SMC_KEY intoNumber:&temp] ){
-       return [temp floatValue];
-    }
-    else return 0.0f;
+    M1Wrapper *m1smc = [M1Wrapper sharedWrapper];
+    return [m1smc get_temp_float];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {

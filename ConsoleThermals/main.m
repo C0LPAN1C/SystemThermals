@@ -6,21 +6,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SMCWrapper.h"
+#import "M1Wrapper.h"
 
-NSString *get_cpu_temperature(int core_number)
+NSString *get_cpu_temperature(void)
 {
-    SMCWrapper *smc = [SMCWrapper sharedWrapper];
-    NSNumber *temp;
-    if ( [smc readKey:"TC0P" intoNumber:&temp] ){
-       return (void)(@"%@"),[temp stringValue];
-    }
-    else return @"0";
+    M1Wrapper *m1smc = [M1Wrapper sharedWrapper];
+    return [m1smc get_temp_values];
 }
 
 int main(int argc, const char * argv[]) {
-    NSLog(@"%@°", get_cpu_temperature(0));
-    
+    get_cpu_temperature();
     return 0;
 }
 

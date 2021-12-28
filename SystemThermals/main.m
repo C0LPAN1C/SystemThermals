@@ -6,7 +6,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "SMCWrapper.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

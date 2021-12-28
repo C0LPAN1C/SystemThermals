@@ -13,11 +13,10 @@
 #define TJ_WARN2    70.0
 #define TJ_WARN3    80.0
 #define TJ_MAX      90.0
-#define SMC_KEY     "TC0P"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property (strong, nonatomic) NSStatusItem *statusItem;
-- (NSString *) get_cpu_temperature: (int) core_number;
+- (NSString *) get_cpu_temperature;
 - (float) get_cpu_temp;
 @end
 
